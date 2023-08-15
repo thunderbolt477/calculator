@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  margin: 3px;
+}
+
+.btn {
+  border: 1px solid black;
+  padding: 10px;
+  margin: 0 3px;
+}
