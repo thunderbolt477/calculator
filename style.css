@@ -10,7 +10,24 @@
 }
 
 .btn {
+  text-align: center;
+  padding-top: 15px;
   border: 1px solid black;
-  padding: 10px;
+  height: 35px;
+  width: 50px;
   margin: 0 3px;
+  border-radius: 50%;
+}
+
+.btn-operation {
+  background-color: #00008b;
+  color: #f5fffa;
+}
+
+#equals {
+  background-color: #b22222;
+}
+
+#clear {
+  background-color: #483d8b;
 }
