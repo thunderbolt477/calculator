@@ -1,11 +1,13 @@
 let num1 = 1;
 let num2 = 2;
 let operation;
-let display;
+let displayValue = 0;
 
 let numbers = document.querySelectorAll(".btn-number");
 let operators = document.querySelectorAll(".btn-operation");
 let equals = document.getElementById("equals");
+let clear = document.getElementById("clear");
+let display = document.getElementById("display");
 
 const add = (num1, num2) => {
   return num1 + num2;
@@ -42,7 +44,6 @@ const assignOperation = (op) => {
 numbers.forEach((div) => {
   div.addEventListener("click", function () {
     let divID = this.id;
-    console.log(divID);
   });
 });
 
@@ -50,25 +51,6 @@ function setOperation(operator) {
   operation = operator;
   console.log(operation);
 }
-
-// operators.forEach((div) => {
-//   div.addEventListener("click", function () {
-//     let operation = this.id;
-//     console.log(operation);
-//   });
-// });
-
-// function solve(num1, num2, operation) {
-//   if (operation === "add") {
-//     return add(num1, num2);
-//   } else if (operation === "subtract") {
-//     return subtract(num1, num2);
-//   } else if (operation === "multiply") {
-//     return multiply(num1, num2);
-//   } else {
-//     return divide(num1, num2);
-//   }
-// }
 
 let solution = equals.addEventListener("click", function () {
   let result;
@@ -86,4 +68,31 @@ let solution = equals.addEventListener("click", function () {
   console.log(result);
 });
 
-console.log(solution);
+const updateDisplay = () => {
+  display.textContent = displayValue;
+};
+
+const clearDisplay = () => {
+  displayValue = "0";
+  updateDisplay();
+};
+
+const appendToDisplay = (content) => {
+  if (displayValue === "0") {
+    displayValue = content;
+  } else {
+    displayValue += content;
+  }
+  updateDisplay();
+};
+
+numbers.forEach((div) => {
+  div.addEventListener("click", function () {
+    let num = this.textContent;
+    if (displayValue === "0") {
+      displayValue = num;
+    } else {
+      appendToDisplay(num);
+    }
+  });
+});
