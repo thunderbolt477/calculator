@@ -23,12 +23,35 @@
   background-color: rgba(0, 0, 0, 0.9);
   color: white;
 }
+#clear {
+  background-color: rgba(178, 34, 34, 0.9);
+}
+
+#clear:hover {
+  background-color: rgba(178, 34, 34, 0.75);
+}
 
 #clear:hover {
   background-color: #b22222;
 }
+#equals {
+  background-color: rgba(211, 84, 0, 0.9);
+}
+
+#equals:hover {
+  background-color: rgba(211, 84, 0, 0.75);
+}
 .span-two {
   grid-column: span 2;
+}
+
+.calc-container > .btn-operation {
+  background-color: rgba(0, 0, 165, 0.75);
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.calc-container > .btn-operation:hover {
+  background-color: rgba(0, 0, 165, 0.5);
 }
 
 .display {
@@ -68,13 +91,4 @@
   margin: 0 3px;
   border-radius: 50%;
   font-size: 2rem;
-}
-
-.btn-operation {
-  background-color: #00008b;
-  color: #f5fffa;
-}
-
-#equals {
-  background-color: #b22222;
 }
